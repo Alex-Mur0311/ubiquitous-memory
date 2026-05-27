@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>MusicHouse | Музыкальный лендинг</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 (free icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="container header-flex">
+        <div class="logo"><i class="fas fa-head-side-vr"></i> MusicHouse</div>
+        <div class="nav-links">
+            <a href="#catalog">Треки</a>
+            <a href="#reviews">Отзывы</a>
+            <a href="#contact">Контакты</a>
+            <button class="theme-toggle" id="themeToggleBtn"><i class="fas fa-moon"></i> Тема</button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>Музыка, которая вдохновляет</h1>
+            <p>Погрузись в мир новых треков, плейлистов и уникального звучания. Открой для себя независимых артистов.</p>
+            <a href="#catalog" class="btn">Слушать сейчас <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Преимущества</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card"><i class="fas fa-waveform"></i><h3>Качество звука</h3><p>FLAC / Hi-Res аудио</p></div>
+                <div class="benefit-card"><i class="fas fa-music"></i><h3>Тысячи треков</h3><p>Еженедельное обновление</p></div>
+                <div class="benefit-card"><i class="fas fa-headphones"></i><h3>Рекомендации AI</h3><p>Персональные подборки</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Каталог / карточки треков -->
+    <section id="catalog">
+        <div class="container">
+            <h2 class="section-title">Популярные треки</h2>
+            <div class="tracks-grid" id="tracksContainer">
+                <!-- начальные карточки (генерируются динамически через JS для удобства) -->
+            </div>
+            <div class="load-more-btn">
+                <button id="loadMoreBtn" class="btn btn-outline">Показать еще <i class="fas fa-plus-circle"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section id="reviews">
+        <div class="container">
+            <h2 class="section-title">Отзывы</h2>
+            <div class="reviews-grid">
+                <div class="review-card"><div class="stars">★★★★★</div><p>"Открыл для себя новых исполнителей. Очень удобный интерфейс!"</p><strong>— Анастасия</strong></div>
+                <div class="review-card"><div class="stars">★★★★☆</div><p>"Темная тема шикарная, звук отличный. Рекомендую"</p><strong>— Дмитрий</strong></div>
+                <div class="review-card"><div class="stars">★★★★★</div><p>"Любимый музыкальный сервис, каждый день слушаю подборки"</p><strong>— Елена</strong></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Форма обратной связи -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Свяжитесь с нами</h2>
+            <div class="form-container">
+                <form id="feedbackForm">
+                    <div class="form-group">
+                        <label for="name">Имя *</label>
+                        <input type="text" id="name" placeholder="Ваше имя">
+                        <div class="error-msg" id="nameError"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" placeholder="example@mail.com">
+                        <div class="error-msg" id="emailError"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Сообщение *</label>
+                        <textarea id="message" rows="3" placeholder="Что вы думаете о сервисе?"></textarea>
+                        <div class="error-msg" id="msgError"></div>
+                    </div>
+                    <button type="submit" class="btn" style="width:100%">Отправить <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="logo" style="justify-content:center; display:flex;">MusicHouse</div>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-telegram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p style="color: var(--text-secondary);">© 2026 MusicHouse — музыка без границ</p>
+    </div>
+</footer>
+</body>
+<script src="script.js"></script>
+</html>
